@@ -4,6 +4,10 @@ color = { 243 207 128 }
 
 revolutionary_colors = { 5 8 1 }
 
+historical_idea_groups = {
+	
+}
+
 historical_units = {
 	chinese_longspear
 	eastern_bow
