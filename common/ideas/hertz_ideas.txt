@@ -1,5 +1,5 @@
 TMG_ideas = {
-#天明
+#天明理念
 start = {
 		leader_land_shock = 1
 		advisor_pool = 1

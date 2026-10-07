@@ -1,5 +1,6 @@
 country_decisions = {
-    hertz_kor_form_tenmng = {
+
+    hertz_test_form_tenmng = {
         potential = {
             NOT = {tag = TMG}
             NOT = {has_country_flag = formed_Tenming_flag}
