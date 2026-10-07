@@ -1,0 +1,57 @@
+country_decisions = {
+
+    hertz_test_form_tenmng = {
+        potential = {
+            NOT = {tag = TMG}
+            NOT = {has_country_flag = formed_Tenming_flag}
+        }
+        allow = {
+            always = yes
+        }
+        effect = {
+            change_tag = TMG
+            set_country_flag = formed_Tenming_flag
+            swap_non_generic_missions = yes
+            if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = TMG_ideas }
+				}
+				country_event = { id = ideagroups.1 }
+			}
+        }
+    }
+    hertz_MNGtoTMG_startdecisiondesc = { # 开始天明线的解释，纯文本，无效果
+        potential = { # 未成立过天明，tag是明，还没有原版土木堡mng_emperor_captured的时候
+            NOT = {has_country_flag = formed_Tenming_flag}
+            tag = MNG
+            NOT = {has_country_flag = mng_emperor_captured}
+            NOT = {has_country_flag = hertz_TMG_had_startselection}
+            ai = no
+        }
+        allow = { # 无条件
+            NOT = {always = yes}
+        }
+        effect = { # 无效果
+            
+        }
+    }
+    hertz_MNGtoTMG_startdecision = { # 开始天明线的决议，将会移除原版的土木堡flag，触发事件
+        potential = { # tag是明，没有成立过天明，有原版土木堡mng_emperor_captured的时候，触发事件hertz_TMG_startselection
+            NOT = {has_country_flag = formed_Tenming_flag}
+            NOT = {has_country_flag = hertz_TMG_had_startselection}
+            tag = MNG
+            has_country_flag = mng_emperor_captured
+            ai = no
+        }
+        allow = {
+            always = yes
+        }
+        effect = {
+            #add_treasury = 1 # 测试用
+            country_event = {
+                id = {id = hertz_TMG_startselection}
+            }
+        }
+    }
+}

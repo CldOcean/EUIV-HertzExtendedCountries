@@ -1,0 +1,26 @@
+country_event = { # 天明最初的选择
+	id = hertz_TMG_startselection
+	title = hertz_TMG_startselection.t
+	desc = hertz_TMG_startselection.d
+	picture = MONGOL_BANNERS_eventPicture
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "hertz_TMG_startselection.a"
+		custom_tooltip = hertz_TMG_startselection.tta
+		set_country_flag = hertz_TMG_had_startselection
+		add_prestige = +15
+	}
+	option = {
+		name = "hertz_TMG_startselection.b"
+		custom_tooltip = hertz_TMG_startselection.ttb
+		add_prestige = -15
+		clr_country_flag = mng_emperor_captured
+		set_country_flag = hertz_TMG_had_startselection
+		OIR = {
+			clr_country_flag = captured_mng_emperor
+		}
+	}
+}
