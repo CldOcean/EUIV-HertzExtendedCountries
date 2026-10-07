@@ -1,0 +1,22 @@
+country_decisions = {
+    hertz_kor_form_tenmng = {
+        potential = {
+            NOT = {tag = TMG}
+            NOT = {has_country_flag = formed_Tenming_flag}
+        }
+        allow = {
+            always = yes
+        }
+        effect = {
+            change_tag = TMG
+            swap_non_generic_missions = yes
+            if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = { has_idea_group = TMG_ideas }
+				}
+				country_event = { id = ideagroups.1 }
+			}
+        }
+    }
+}

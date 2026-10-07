@@ -1,0 +1,33 @@
+graphical_culture = asiangfx
+
+color = { 243 207 128 }
+
+revolutionary_colors = { 5 8 1 }
+
+historical_units = {
+	chinese_longspear
+	eastern_bow
+	chinese_footsoldier
+	chinese_steppe
+	asian_arquebusier
+	asian_charge_cavalry
+	asian_mass_infantry
+	manchu_banner
+	han_banner
+	asian_musketeer
+	chinese_dragoon
+	reformed_asian_musketeer
+	reformed_asian_cavalry
+	reformed_manchu_rifle
+}
+
+monarch_names = {
+	"Qizhen #0" = 10
+}
+
+leader_names = {
+	Zhu
+}
+ship_names = {
+	Beiji
+}

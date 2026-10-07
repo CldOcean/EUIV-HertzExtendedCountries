@@ -1,0 +1,47 @@
+TMG_ideas = {
+#天明
+start = {
+		leader_land_shock = 1
+		advisor_pool = 1
+	}
+	bonus = {
+		leader_siege = 1
+	}
+	trigger = {
+		tag = TMG
+	}
+	free = yes
+	TMG_ideas_1 = {
+		#出于寒微
+		manpower_recovery_speed = 0.15
+		war_exhaustion = -0.03
+	}
+	TMG_ideas_2 = {
+		#游击战术
+		leader_land_manuever = 1
+		movement_speed = 0.15
+	}
+	TMG_ideas_3 = {
+		#杀富济贫
+		land_morale = 0.10
+		loot_amount = 0.15
+	}
+	TMG_ideas_4 = {
+		#西营
+		discipline = 0.05
+	}
+	TMG_ideas_5 = {
+		#黄虎出川！
+		shock_damage = 0.1
+		core_creation = -0.1
+	}
+	TMG_ideas_6 = {
+		#七杀碑
+		global_unrest = -2
+	}
+	TMG_ideas_7 = {
+		#大西治下的和平
+		global_trade_goods_size_modifier = 0.10
+	}
+
+}
