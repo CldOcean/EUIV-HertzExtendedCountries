@@ -1,0 +1,84 @@
+
+types = {
+	type[disaster] = {
+		path = "game/common/disasters"
+		localisation = {
+			## required
+			name = "$"
+			#Both desc_ and _desc exist for different disasters, but as far as I can tell neither are used
+#			## required
+#			desc = "desc_$"
+		}
+	}
+}
+
+
+disaster = {
+	## replace_scope = { root = country this = country }
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	## replace_scope = { root = country this = country }
+	can_start = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	## replace_scope = { root = country this = country }
+	can_stop = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	## replace_scope = { root = country this = country }
+	can_end = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	## replace_scope = { root = country this = country }
+	progress = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+
+	## cardinality = 0..1
+	## replace_scope = { root = country this = country }
+	down_progress = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	
+	## cardinality = 0..1
+	## replace_scope = { root = country this = country }
+	modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}	
+	
+	## cardinality = 0..1
+	stability_hit_on_war = int[1..6]
+
+	on_start = <event.country>
+
+	## cardinality = 0..1
+	on_end = <event.country>
+	
+	## cardinality = 0..1
+	on_start_effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	
+	## cardinality = 0..1
+	on_monthly = {
+		## cardinality = 0..1
+		events = {
+			## cardinality = 0..inf
+			<event.country>
+		}
+		## cardinality = 0..1
+		random_events = {
+			## cardinality = 0..inf
+			int = 0
+			## cardinality = 0..inf
+			int = <event.country>
+		}
+	}
+}
+

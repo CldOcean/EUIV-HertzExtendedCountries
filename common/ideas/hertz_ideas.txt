@@ -14,7 +14,7 @@ start = {
 	TMG_ideas_1 = {
 		#朕把他们都打败了啊
 		land_morale = 0.1
-		prestige_from_land = 0.3
+		prestige_from_land = 1
 	}
 	TMG_ideas_2 = {
 		#凡日月所照
